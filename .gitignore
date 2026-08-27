@@ -1,0 +1,16 @@
+# Entorno
+.venv/
+venv/
+
+# Salidas de las fases: se generan al ejecutar, no se versionan.
+resultados/
+figuras/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Sistema / editor
+.DS_Store
+.vscode/

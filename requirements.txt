@@ -1,0 +1,22 @@
+# Entorno del proyecto (Python 3.12). Versiones fijadas para reproducibilidad.
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+statsmodels==0.14.6        # SARIMAX, ADF/KPSS, STL, Ljung-Box
+scikit-learn==1.9.0        # regresión, métricas, Random Forest, permutation importance
+xgboost==3.3.0             # gradient boosting multi-salida
+matplotlib==3.10.9
+pyarrow==24.0.0            # lectura/escritura de parquet
+holidays==0.98             # festivos nacionales de España
+joblib==1.5.3              # paralelización de los ajustes por hora
+python-dateutil==2.9.0.post0
+
+# Redes neuronales. En Linux, PyPI sirve por defecto la build con CUDA (~2 GB), que es la que se
+# instala así y la que usa la GPU si la hay. Para la build de CPU, mucho más ligera:
+#   pip install torch==2.13.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.13.0
+
+# Opcional, solo para el tuning de XGBoost en GPU (`--device=cuda`): cupy, en la build de CUDA
+# que corresponda. Sin él, ese camino avisa y cae a CPU.
